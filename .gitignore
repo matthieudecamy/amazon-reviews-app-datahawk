@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# C# files
+AmazonReviews.Web.API/AmazonReviews.Web.API/obj
+AmazonReviews.Web.API/AmazonReviews.Web.API/bin
+AmazonReviews.Web.API/.vs/*
+**/obj/*
