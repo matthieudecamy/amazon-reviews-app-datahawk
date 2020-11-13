@@ -1,0 +1,7 @@
+.asin-dialog {
+    display: flex;
+    flex-direction: column
+}
+.instructions {
+    margin-bottom: 15px
+}

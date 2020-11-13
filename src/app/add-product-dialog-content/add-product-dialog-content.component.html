@@ -1,0 +1,21 @@
+<div class="asin-dialog">
+    <div class="instructions">Enter an ASIN and press ENTER to start entering more.</div>
+    <mat-form-field class="product-asin-chip-list">
+        <mat-chip-list #chipList aria-label="ASIN selection">
+          <mat-chip *ngFor="let asin of data" [selectable]="selectable" (removed)="remove(asin)">
+            {{asin}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Request ASIN indexation"
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 matChipInputAddOnBlur=true
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+    
+      <button class="start-indexing-button" mat-raised-button color="primary" [mat-dialog-close]="data">
+          Start indexing <mat-icon>cached</mat-icon>
+        </button>
+    </div>
+  
